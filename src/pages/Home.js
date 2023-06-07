@@ -45,7 +45,7 @@ export default function Home() {
         </h1>
         <section className="flex justify-evenly w-full text-5xl mb-20">
           <Link to="/about">{about ? <h2>Sobre Mi</h2> : <h2>About</h2>}</Link>
-          {tech ? <h2>Tecnología</h2> : <h2>Technology</h2>}
+          <Link to="/technology">{tech ? <h2>Tecnología</h2> : <h2>Technology</h2>}</Link>
           {projects ? <h2>Proyectos</h2> : <h2>Projects</h2>}
           {contact ? <h2>Contacto</h2> : <h2>Contact</h2>}
         </section>
