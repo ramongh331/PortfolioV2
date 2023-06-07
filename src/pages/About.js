@@ -9,18 +9,10 @@ import { useState } from "react";
 
 export default function About() {
   const [imgInView, setImgInView] = useState(0);
-  const [stats, setStats] = useState("hidden");
 
   const moveStyle = {
     transform: `translateX(-${imgInView}%)`,
   };
-
-  function handleMouseEnter1() {
-    setStats("absolute");
-  }
-  function handleMouseLeave1() {
-    setStats("hidden");
-  }
 
   function handleNext() {
     if (imgInView < 500) {
@@ -37,7 +29,8 @@ export default function About() {
 
   return (
     <>
-      <main className="bg-yellow-1000 w-full h-screen font-display">
+      <main className="bg-yellow-1000 w-full h-screen font-display relative">
+        
         <div className="h-24"></div>
         <div className="flex justify-between">
           <section className="w-3/12 h-8/12 ml-24 p-10 bg-[#362D28] text-white rounded-3xl">
@@ -72,17 +65,29 @@ export default function About() {
                   >
                     <img
                       className=""
-                      onMouseEnter={handleMouseEnter1}
-                      onMouseLeave={handleMouseLeave1}
                       src={Coder}
-                      alt=""
+                      alt="Ramon in black polo and blue jeans holding a wireless keyboard."
                     />
-                    <div className={`${stats} w-80 h-80 bg-blue-50`}>Stats</div>
-                    <img src={Golfer} alt="" />
-                    <img src={Hero} alt="" />
-                    <img src={Evil} alt="" />
-                    <img src={Vacay} alt="" />
-                    <img src={Sleeper} alt="" />
+                    <img
+                      src={Golfer}
+                      alt="Ramon in teal polo with tiny plink flamingos on it and white shorts wearing a glove on right hand and holding a golf club over his right shoulder."
+                    />
+                    <img
+                      src={Hero}
+                      alt="Ramon with his hands out wearing a black t-shirt with the React logo and a red square, black pants, and a white cape."
+                    />
+                    <img
+                      src={Evil}
+                      alt="Ramon with his head atop a white and black robot body."
+                    />
+                    <img
+                      src={Vacay}
+                      alt="Ramon wearing an unbuttoned blue button-up with a white t-shirt underneath, salmon colored swim trunks, black sandals, holding a wireless keyboard. His facial expression is annoyed."
+                    />
+                    <img
+                      src={Sleeper}
+                      alt="Ramon in a teddy bear onesie sleeping on a gaming chair holdinf a bag of chips with his right hand and a wireless keyboard with his left."
+                    />
                   </div>
                 </article>
                 <button className="text-8xl font-bold" onClick={handleNext}>
