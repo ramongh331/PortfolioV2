@@ -32,7 +32,7 @@ export default function Technology() {
      navigate('/about')
     }
   };
-// I need to add the contact page key press when I create the contact page.
+// I need to add the contact & Projects page key press when I create the both pages.
 
 
   const position = {
