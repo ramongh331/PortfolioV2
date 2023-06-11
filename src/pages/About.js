@@ -5,7 +5,8 @@ import Hero from "../public/images/SuperReact_NoBG.png";
 import Vacay from "../public/images/Vacation_NoBG.png";
 import Sleeper from "../public/images/Sleeping_NoBG.png";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function About() {
   const [imgInView, setImgInView] = useState(0);
@@ -39,15 +40,57 @@ export default function About() {
    
   }
 
+  // --------Pointer Tracking--------------
+
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [pointerMenu, setPointerMenu] = useState('hidden')
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyPress, true);
+    document.addEventListener("keydown", handleHKeyPress, true);
+    document.addEventListener("keydown", handleTKeyPress, true);
+    window.addEventListener("mousemove", (event) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    });
+  }, []);
+
+  const handleKeyPress = (event) => {
+    if (event.key === "m") {
+      console.log("Your Pressed m");
+      setPointerMenu('visible')
+    }
+  };
+
+  let navigate = useNavigate()
+  const handleHKeyPress = (event) => {
+    if (event.key === "h") {
+     navigate('/')
+    }
+  };
+  const handleTKeyPress = (event) => {
+    if (event.key === "t") {
+     navigate('/technology')
+    }
+  };
+// I need to add the contact page key press when I create the contact page.
+
+
+  const position = {
+    left: mousePosition.x + 'px',
+    top: mousePosition.y + 'px'
+  }
+
+  // --------------------------------------
+
   return (
     <>
       <main className="bg-yellow-1000 w-full h-screen font-display relative">
-        
+      
         <div className="flex justify-center h-24 font-bold">
         <button  className="" onClick={handleClick}>English/Español</button>
         </div>
-        <div className="flex justify-evenly bg-pink-200">
-          <div className="bg-yellow-100 w-3/12 h-8/12">
+        <div className="flex justify-evenly">
+          <div className="w-3/12 h-8/12">
             <section className=" p-10 bg-[#362D28] text-white rounded-3xl">
             {about ? <h2 className="text-6xl mb-6 font-semibold">Sobre Mi</h2> : <h2 className="text-6xl mb-6 font-semibold">About</h2>}
               {paragraph ? <p className="text-2xl leading-[3rem]">
@@ -67,16 +110,16 @@ export default function About() {
               </p>}
             </section>
           </div>
-          <section className="bg-blue-200">
+          <section className="">
             <section className="flex flex-col">
               <article className="text-center">
               {player ? <h2 className="text-5xl">Elige tu Ramón</h2> : <h2 className="text-5xl">Choose Your Ramón</h2>}
               </article>
-              <div className="flex bg-green-200">
+              <div className="flex">
                 <button className="text-8xl font-bold" onClick={handleBack}>
                   &lt;
                 </button>
-                <article className="max-w-[60rem] h-[60rem] overflow-hidden">
+                <article className="max-w-[60rem] h-[60rem] overflow-hidden flex items-center">
                   <div
                     className="flex duration-300 ease-in-out relative"
                     style={moveStyle}
@@ -115,6 +158,14 @@ export default function About() {
             </section>
           </section>
         </div>
+        <div
+        style={position}
+        className={`w-72 h-fit flex bg-white justify-evenly absolute ${pointerMenu} -translate-x-2/4 -translate-y-10`}
+      >
+        <p>Home</p>
+        <p>Technology</p>
+        <p>Contact</p>
+      </div>
       </main>
     </>
   );
