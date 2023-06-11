@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Technology() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -6,6 +7,8 @@ export default function Technology() {
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyPress, true);
+    document.addEventListener("keydown", handleHKeyPress, true);
+    document.addEventListener("keydown", handleAKeyPress, true);
     window.addEventListener("mousemove", (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     });
@@ -18,6 +21,20 @@ export default function Technology() {
     }
   };
 
+  let navigate = useNavigate()
+  const handleHKeyPress = (event) => {
+    if (event.key === "h") {
+     navigate('/')
+    }
+  };
+  const handleAKeyPress = (event) => {
+    if (event.key === "a") {
+     navigate('/about')
+    }
+  };
+// I need to add the contact page key press when I create the contact page.
+
+
   const position = {
     left: mousePosition.x + 'px',
     top: mousePosition.y + 'px'
@@ -25,7 +42,7 @@ export default function Technology() {
 
   return (
     <><div className="w-full h-screen bg-green-200 relative">
-      <h2>Going to Try something</h2>
+      <h2>Press m to Open Menu</h2>
       <p>{`x: ${mousePosition.x}, y: ${mousePosition.y}`}</p>
       <div
         style={position}
@@ -33,7 +50,6 @@ export default function Technology() {
       >
         <p>Home</p>
         <p>About</p>
-        <p>Technology</p>
         <p>Contact</p>
       </div>
    </div> </>
