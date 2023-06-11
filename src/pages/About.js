@@ -46,35 +46,37 @@ export default function About() {
         <div className="flex justify-center h-24 font-bold">
         <button  className="" onClick={handleClick}>English/Español</button>
         </div>
-        <div className="flex justify-between">
-          <section className="w-3/12 h-8/12 ml-24 p-10 bg-[#362D28] text-white rounded-3xl">
-          {about ? <h2 className="text-6xl mb-6 font-semibold">Sobre Mi</h2> : <h2 className="text-6xl mb-6 font-semibold">About</h2>}
-            {paragraph ? <p className="text-2xl leading-[3rem]">
-            Soy un creativo desarrollador delantero (front-end) con pasión por la tecnología y la accesibilidad con 5 años de experiencia. Mi experiencia en cine, educación e informática permite que mis habilidades creativas y analíticas se mezclen perfectamente. Soy adaptable a la tecnología que uso. Soy competente en HTML, CSS (y Sass) y Javascript (REACT JS, Node JS y bibliotecas y marcos REACT). Me impulso para desarrollar sitios web que creen una experiencia navegable. Cuando me acerco a los desafíos, diseño planes bien pensados, consulto a mi equipo si es necesario y luego hago un seguimiento con un producto final fácil de usar. Actualmente, estoy buscando desarrollar sitios web que puedan continuar brindando excelentes experiencias de usuario.
-            </p> : <p className="text-2xl leading-[3rem]">
-              I am a creative Front-End Developer with a passion for technology
-              and accessibility with 5 years of experience. My background in
-              filmmaking, education, and computer science allows my creative and
-              analytical traits to blend perfectly. I am adaptable to the
-              technology I use. I am proficient in HTML, CSS (and Sass), and
-              Javascript (REACT JS, Node JS, and React libraries and
-              frameworks). I drive to develop websites that create a navigable
-              experience. When approaching challenges, I devise well-thought-out
-              plans, consult my team if needed, then follow up with a
-              user-friendly end product. Currently, I am looking to develop
-              websites that can continue to provide great user experiences.
-            </p>}
-          </section>
-          <section className="mr-96">
+        <div className="flex justify-evenly bg-pink-200">
+          <div className="bg-yellow-100 w-3/12 h-8/12">
+            <section className=" p-10 bg-[#362D28] text-white rounded-3xl">
+            {about ? <h2 className="text-6xl mb-6 font-semibold">Sobre Mi</h2> : <h2 className="text-6xl mb-6 font-semibold">About</h2>}
+              {paragraph ? <p className="text-2xl leading-[3rem]">
+              Soy un creativo desarrollador delantero (front-end) con pasión por la tecnología y la accesibilidad con 5 años de experiencia. Mi experiencia en cine, educación e informática permite que mis habilidades creativas y analíticas se mezclen perfectamente. Soy adaptable a la tecnología que uso. Soy competente en HTML, CSS (y Sass) y Javascript (REACT JS, Node JS y bibliotecas y marcos REACT). Me impulso para desarrollar sitios web que creen una experiencia navegable. Cuando me acerco a los desafíos, diseño planes bien pensados, consulto a mi equipo si es necesario y luego hago un seguimiento con un producto final fácil de usar. Actualmente, estoy buscando desarrollar sitios web que puedan continuar brindando excelentes experiencias de usuario.
+              </p> : <p className="text-2xl leading-[3rem]">
+                I am a creative Front-End Developer with a passion for technology
+                and accessibility with 5 years of experience. My background in
+                filmmaking, education, and computer science allows my creative and
+                analytical traits to blend perfectly. I am adaptable to the
+                technology I use. I am proficient in HTML, CSS (and Sass), and
+                Javascript (REACT JS, Node JS, and React libraries and
+                frameworks). I drive to develop websites that create a navigable
+                experience. When approaching challenges, I devise well-thought-out
+                plans, consult my team if needed, then follow up with a
+                user-friendly end product. Currently, I am looking to develop
+                websites that can continue to provide great user experiences.
+              </p>}
+            </section>
+          </div>
+          <section className="bg-blue-200">
             <section className="flex flex-col">
               <article className="text-center">
               {player ? <h2 className="text-5xl">Elige tu Ramón</h2> : <h2 className="text-5xl">Choose Your Ramón</h2>}
               </article>
-              <div className="flex">
+              <div className="flex bg-green-200">
                 <button className="text-8xl font-bold" onClick={handleBack}>
                   &lt;
                 </button>
-                <article className="w-[60rem] h-[60rem] overflow-hidden">
+                <article className="max-w-[60rem] h-[60rem] overflow-hidden">
                   <div
                     className="flex duration-300 ease-in-out relative"
                     style={moveStyle}
