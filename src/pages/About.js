@@ -102,12 +102,12 @@ export default function About() {
         <button onClick={handleClick}>English/Español</button>
         </div>
         <div className="flex justify-evenly">
-          <div className="w-3/12 h-8/12">
+          <div className="w-[45rem] h-full">
             <section className=" p-10 bg-[#362D28] text-white rounded-3xl">
             {about ? <h3 className="text-6xl mb-6 font-semibold">Sobre Mi</h3> : <h3 className="text-6xl mb-6 font-semibold">About</h3>}
-              {paragraph ? <p className="text-2xl leading-[3rem]">
+              {paragraph ? <p className="text-xl leading-[3rem]">
               Soy un creativo desarrollador delantero (front-end) con pasión por la tecnología y la accesibilidad con 5 años de experiencia. Mi experiencia en cine, educación e informática permite que mis habilidades creativas y analíticas se mezclen perfectamente. Soy adaptable a la tecnología que uso. Soy competente en HTML, CSS (y Sass) y Javascript (REACT JS, Node JS y bibliotecas y marcos REACT). Me impulso para desarrollar sitios web que creen una experiencia navegable. Cuando me acerco a los desafíos, diseño planes bien pensados, consulto a mi equipo si es necesario y luego hago un seguimiento con un producto final fácil de usar. Actualmente, estoy buscando desarrollar sitios web que puedan continuar brindando excelentes experiencias de usuario.
-              </p> : <p className="text-2xl leading-[3rem]">
+              </p> : <p className="text-xl leading-[3rem]">
                 I am a creative Front-End Developer with a passion for technology
                 and accessibility with 5 years of experience. My background in
                 filmmaking, education, and computer science allows my creative and
@@ -131,7 +131,7 @@ export default function About() {
                 <button className="text-8xl font-bold" onClick={handleBack}>
                   &lt;
                 </button>
-                <article className="max-w-[60rem] h-[60rem] overflow-hidden flex items-center">
+                <article className="max-w-[40rem] h-[45rem] overflow-hidden flex items-center">
                   <div
                     className="flex duration-300 ease-in-out relative"
                     style={moveStyle}
