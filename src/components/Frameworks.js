@@ -1,6 +1,13 @@
 import { useState } from "react";
 import nextBtn from "../public/images/next.png"
 import backBtn from "../public/images/back.png"
+import ReactImg from "../public/images/frameworkImages/ReactMovieCover.jpg"
+import NextImg from "../public/images/frameworkImages/Next.jpg"
+import NodeImg from "../public/images/frameworkImages/Node.jpg"
+import TWImg from "../public/images/frameworkImages/Tailwind.jpg"
+import BSImg from "../public/images/frameworkImages/Bootstrap.jpg"
+import MUIImg from "../public/images/frameworkImages/MaterialUI.jpg"
+import ExpressImg from "../public/images/frameworkImages/Express.jpg"
 
 export default function FrameworksRow() {
 
@@ -27,21 +34,18 @@ export default function FrameworksRow() {
 
   return (
     <>
-
-
-  {/* Libraries & Frameworks Row */}
   <section className="pl-28 relative overflow-hidden mb-5">
     <section className="">
       <h3 className="text-2xl text-white my-5">Libraries & Frameworks</h3>
       <section className="w-full relative">
-        <div className="w-fit flex duration-300 ease-in-out" style={frameWorksMoveStyle}>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">React</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Next</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Node.js</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Tailwind CSS</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Bootstrap</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Material-UI</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Express.js</div>
+        <div className="w-fit h-52 flex items-center duration-300 ease-in-out" style={frameWorksMoveStyle}>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ReactImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NextImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NodeImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={TWImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={BSImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={MUIImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ExpressImg} alt=""/></div>
         </div>
       </section>
     </section>
