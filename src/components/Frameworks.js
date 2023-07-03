@@ -36,7 +36,7 @@ export default function FrameworksRow() {
     <>
   <section className="pl-28 relative overflow-hidden mb-5">
     <section className="">
-      <h3 className="text-2xl text-white my-5">Libraries & Frameworks</h3>
+      <h3 className="text-2xl text-white mt-5">Libraries & Frameworks</h3>
       <section className="w-full relative">
         <div className="w-fit h-52 flex items-center duration-300 ease-in-out" style={frameWorksMoveStyle}>
           <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ReactImg} alt=""/></div>

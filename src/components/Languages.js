@@ -33,7 +33,7 @@ export default function LanguagesRow() {
     <>
   <section className="pl-28 relative overflow-hidden mb-5">
     <section className="">
-      <h3 className="text-2xl text-white my-5">Languages</h3>
+      <h3 className="text-2xl text-white">Languages</h3>
       <section className="w-full relative">
         <div className="w-fit h-52 flex items-center duration-300 ease-in-out">
           <div className="bg-green-600 w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={HTML} alt=""/></div>
