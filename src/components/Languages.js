@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 // import nextBtn from "../public/images/next.png"
 // import backBtn from "../public/images/back.png"
 import HTML from "../public/images/languageImages/HTML.jpg"
