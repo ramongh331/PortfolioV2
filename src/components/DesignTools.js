@@ -1,6 +1,13 @@
 import { useState } from "react";
 import nextBtn from "../public/images/next.png"
 import backBtn from "../public/images/back.png"
+import Procreate from "../public/images/designToolsImages/Procreate.jpg"
+import Figma from "../public/images/designToolsImages/Figma.jpg"
+import XD from "../public/images/designToolsImages/AdobeXD.jpg"
+import PS from "../public/images/designToolsImages/Photoshop.jpg"
+import AI from "../public/images/designToolsImages/Illustrator.jpg"
+import AE from "../public/images/designToolsImages/AfterEffects.jpg"
+import Premiere from "../public/images/designToolsImages/PremierePro.jpg"
 
 export default function DesignRow() {
 
@@ -31,16 +38,16 @@ export default function DesignRow() {
   {/* Design Tools Row */}
   <section className="pl-28 relative overflow-hidden mb-10">
     <section className="">
-      <h3 className="text-2xl text-white my-5">Design Tools</h3>
+      <h3 className="text-2xl text-white">Design Tools</h3>
       <section className="w-full relative">
-        <div className="w-fit flex duration-300 ease-in-out" style={designMoveStyle}>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Figma</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Adobe XD</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Adobe Photoshop</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Adobe Illustrator</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Adobe After Effects</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Adobe Premiere Pro</div>
-          <div className="bg-green-600 p-4 w-[19rem] h-[11rem] rounded-xl box-border mr-7 overflow-hidden">Procreation (iPad)</div>
+        <div className="w-fit h-52 flex items-center duration-300 ease-in-out" style={designMoveStyle}>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Figma} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={XD} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={PS} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={AI} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={AE} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Premiere} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Procreate} alt=""/></div>
         </div>
       </section>
     </section>
