@@ -36,10 +36,10 @@ export default function LanguagesRow() {
       <h3 className="text-2xl text-white">Languages</h3>
       <section className="w-full relative">
         <div className="w-fit h-52 flex items-center duration-300 ease-in-out">
-          <div className="bg-green-600 w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={HTML} alt=""/></div>
-          <div className="bg-green-600 w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={JS} alt=""/></div>
-          <div className="bg-green-600 w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={CSS} alt=""/></div>
-          <div className="bg-green-600 w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Sass} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={HTML} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={JS} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={CSS} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Sass} alt=""/></div>
         </div>
       </section>
     </section>

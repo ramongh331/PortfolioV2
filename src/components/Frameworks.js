@@ -39,18 +39,18 @@ export default function FrameworksRow() {
       <h3 className="text-2xl text-white mt-5">Libraries & Frameworks</h3>
       <section className="w-full relative">
         <div className="w-fit h-52 flex items-center duration-300 ease-in-out" style={frameWorksMoveStyle}>
-          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ReactImg} alt=""/></div>
-          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NextImg} alt=""/></div>
-          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NodeImg} alt=""/></div>
-          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={TWImg} alt=""/></div>
-          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={BSImg} alt=""/></div>
-          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={MUIImg} alt=""/></div>
-          <div className="w-[19rem] h-[11rem] rounded-xl box-content mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ExpressImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ReactImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NextImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NodeImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={TWImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={BSImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={MUIImg} alt=""/></div>
+          <div className="w-[19rem] h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ExpressImg} alt=""/></div>
         </div>
       </section>
     </section>
-        <img className={`h-12 absolute top-1/2 left-2`} onClick={handleFrameWorksBack} src={backBtn} alt="white back arrow"/>
-        <img className={`h-12 absolute top-1/2 right-2`} onClick={handleFrameWorksNext} src={nextBtn} alt="white next arrow"/>
+        <img className={`h-12 absolute top-1/2 left-2 cursor-pointer`} onClick={handleFrameWorksBack} src={backBtn} alt="white back arrow"/>
+        <img className={`h-12 absolute top-1/2 right-2 cursor-pointer`} onClick={handleFrameWorksNext} src={nextBtn} alt="white next arrow"/>
   </section>
     
     </>
