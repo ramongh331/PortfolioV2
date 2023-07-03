@@ -7,6 +7,8 @@ import App from "./App";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Technology from "./pages/Technology";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 
 const Router = createBrowserRouter(
@@ -16,6 +18,8 @@ const Router = createBrowserRouter(
         <Route path="" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="technology" element={<Technology />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
     </>
   )
