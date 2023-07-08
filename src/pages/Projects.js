@@ -96,8 +96,8 @@ export default function Projects(){
     
     return <>
     <main className="w-full">
-        <h1>Projects</h1>
-        <div className="w-full h-28 bg-green-300"></div>
+        <h2>Projects</h2>
+        <div className="w-full h-28 bg-green-300"><p className="text-5xl">This is just a concept I was testing. Still Under construction</p></div>
 
         <section>
             <div className="m-auto w-[60rem] h-[40rem] bg-blue-100 relative">
