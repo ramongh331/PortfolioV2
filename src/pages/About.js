@@ -10,6 +10,8 @@ import TKey from "../public/images/keyboard_key_t.png";
 import PKey from "../public/images/keyboard_key_p.png";
 import CKey from "../public/images/keyboard_key_c.png";
 import ESCKey from "../public/images/keyboard_key_esc.png";
+import Next from "../public/images/next.png"
+import Back from "../public/images/back.png"
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -56,6 +58,8 @@ export default function About() {
     document.addEventListener("keydown", handleEscKeyPress, true);
     document.addEventListener("keydown", handleHKeyPress, true);
     document.addEventListener("keydown", handleTKeyPress, true);
+    document.addEventListener("keydown", handlePKeyPress, true);
+    document.addEventListener("keydown", handleCKeyPress, true);
     window.addEventListener("mousemove", (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     });
@@ -83,6 +87,16 @@ export default function About() {
      navigate('/technology')
     }
   };
+  const handlePKeyPress = (event) => {
+    if (event.key === "p") {
+     navigate('/projects')
+    }
+  };
+  const handleCKeyPress = (event) => {
+    if (event.key === "c") {
+     navigate('/contact')
+    }
+  };
 // I need to add the contact & Projects page key press when I create the both pages.
 
 
@@ -101,7 +115,7 @@ export default function About() {
         <p className="flex items-center">Press <img className="w-6 mx-2" src={NKey} alt="N keyboard key"/> to open Navigation & <img className="w-8 mx-2" src={ESCKey} alt="escape keyboard key"/> to close Navigtation</p>
         <button onClick={handleClick}>English/Español</button>
         </div>
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly items-center">
           <div className="w-[45rem] h-full">
             <section className=" p-10 bg-[#362D28] text-white rounded-3xl">
             {about ? <h3 className="text-6xl mb-6 font-semibold">Sobre Mi</h3> : <h3 className="text-6xl mb-6 font-semibold">About</h3>}
@@ -129,7 +143,7 @@ export default function About() {
               </article>
               <div className="flex">
                 <button className="text-8xl font-bold" onClick={handleBack}>
-                  &lt;
+                <img src={Back} alt="Back button"/>
                 </button>
                 <article className="max-w-[40rem] h-[45rem] overflow-hidden flex items-center">
                   <div
@@ -164,7 +178,7 @@ export default function About() {
                   </div>
                 </article>
                 <button className="text-8xl font-bold" onClick={handleNext}>
-                  &gt;
+                  <img src={Next} alt="Next button"/>
                 </button>
               </div>
             </section>
