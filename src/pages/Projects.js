@@ -133,14 +133,14 @@ export default function Projects() {
 
   return (
     <>
-      <main className="w-full h-screen">
+      <main className="w-full h-screen ">
         <h2>Projects</h2>
         <div className="w-full h-14 bg-green-300 text-center">
           <p className="text-3xl">Still Under construction</p>
         </div>
 
-        <div className="w-full h-full flex justify-around bg-blue-100">
-          <div className="w-11/12 h-fit bg-gray-300 border-black border-2 relative">
+        <div className="w-full h-full flex justify-around">
+          <div className="w-11/12 h-fit border-black border-2 relative">
 {/* GameBoy */}
             <div className="w-fit h-fit relative">
               <img
