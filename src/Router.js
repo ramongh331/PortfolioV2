@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Technology from "./pages/Technology";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import ProjectsTest from "./pages/ProjectsTest";
 
 
 const Router = createBrowserRouter(
@@ -19,6 +20,7 @@ const Router = createBrowserRouter(
         <Route path="about" element={<About />} />
         <Route path="technology" element={<Technology />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="projectstest" element={<ProjectsTest />} />
         <Route path="contact" element={<Contact />} />
       </Route>
     </>
