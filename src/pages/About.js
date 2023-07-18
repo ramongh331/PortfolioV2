@@ -32,10 +32,19 @@ export default function About() {
 
   return (
     <>
-      <main className="bg-yellow-1000 w-full h-screen font-display relative">
+      <main className="bg-yellow-1000 
+      w-full 
+      max-sm:h-fit sm:h-fit h-screen 
+      font-display relative">
       
         <nav className="bg-[#362D28] w-full h-14">
-          <section className="mx-auto flex justify-between items-center w-[40%] h-full text-xl text-white">
+          <section className="mx-auto flex 
+          max-sm:w-full sm:w-full w-[40%] 
+          h-full
+          max-sm:justify-evenly sm:justify-evenly justify-between 
+          items-center 
+          max-sm:text-xs text-xl 
+          text-white">
             <Link to="/">
               <h2>Home</h2>
             </Link>
@@ -51,11 +60,19 @@ export default function About() {
           </section>
         </nav>
         
-        <div className="flex justify-evenly items-center mt-10">
-          <div className="w-[45rem] h-full">
-            <section className=" p-10 bg-[#362D28] text-white rounded-3xl">
-            <h3 className="text-6xl mb-6 font-semibold">About</h3>
-              <p className="text-xl leading-[3rem]">
+        <div className="flex flex-col-reverse
+        justify-evenly items-center mt-10">
+          <div className="max-sm:w-11/12 sm:w-11/12 lg:w-10/12 2xl:w-8/12 min-2xl:w-7/12
+          h-full">
+            <section className="
+            max-sm:mb-5 sm:mb-5
+            max-sm:p-8 p-10 
+            bg-[#362D28] text-white rounded-3xl">
+            <h3 className="max-sm:text-3xl text-6xl 
+            mb-6 
+            font-semibold">About</h3>
+              <p className="max-sm:text-base text-xl 
+              leading-[3rem]">
                 I am a creative Front-End Developer with a passion for technology
                 and accessibility with 5 years of experience. My background in
                 filmmaking, education, and computer science allows my creative and
@@ -73,13 +90,17 @@ export default function About() {
           <section className="">
             <section className="flex flex-col">
               <article className="text-center">
-             <h2 className="text-5xl">Choose Your Ramón</h2>
+                <h2 className="max-sm:text-2xl text-5xl">Choose Your Ramón</h2>
               </article>
               <div className="flex">
-                <button className="text-8xl font-bold" onClick={handleBack}>
+                <button onClick={handleBack}>
                 <img src={Back} alt="Back button"/>
                 </button>
-                <article className="max-w-[40rem] h-[45rem] overflow-hidden flex items-center">
+                <article className="max-sm:w-full sm:w-full lg:w-9/12 max-w-[40rem] 
+                max-sm:h-fit h-[45rem] 
+                overflow-hidden 
+                flex 
+                items-center">
                   <div
                     className="flex duration-300 ease-in-out relative"
                     style={moveStyle}
@@ -111,7 +132,7 @@ export default function About() {
                     />
                   </div>
                 </article>
-                <button className="text-8xl font-bold" onClick={handleNext}>
+                <button onClick={handleNext}>
                   <img src={Next} alt="Next button"/>
                 </button>
               </div>
