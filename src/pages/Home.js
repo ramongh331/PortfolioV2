@@ -17,8 +17,8 @@ export default function Home() {
       <main className="bg-yellow-1000 w-full h-screen flex flex-col justify-evenly items-center font-display font-bold">
         {/* <p className="text-3xl bg-white">Under Construction, but you can see what is done so far.</p> */}
         <h1
-          className="max-sm:text-4xl sm:text-8xl 2xl:text-9xl text-[220px] 
-          max-sm:w-11/12 sm:w-11/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 
+          className="max-sm:text-4xl sm:text-8xl 2xl:text-[190px] min-[1920px]:text-[220px] 
+          max-sm:w-11/12 sm:w-11/12 lg:w-9/12 xl:w-8/12 2xl:w-11/12 
           text-center
           ease-in-out duration-300"
           onMouseEnter={handleMouseEnter}
