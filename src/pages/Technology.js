@@ -25,30 +25,57 @@ export default function Technology() {
   return (
     <>
       <main className="bg-gray-800 w-full h-full relative">
-        <header className="bg-gradient-to-b from-gray-800 w-full h-20 flex justify-between z-10 fixed">
+        <header className="bg-gradient-to-b from-gray-800 
+        w-full 
+        max-sm:h-10 sm:h-14 2xl:h-20 
+        flex 
+        justify-between 
+        items-center
+        z-10 fixed">
           <Link to="/technology">
-            <h1 className="font-bold text-2xl ml-10 text-[#1be783] mt-6">
+            <h1 className="font-bold 
+            max-sm:text-lg sm:text-2xl 
+            max-sm:ml-2 sm:ml-10 
+            mt-6
+            text-[#1be783] 
+            ">
               Skills+
             </h1>
           </Link>
-          <section className="w-[35rem] flex justify-between text-xl font-semibold text-white mt-6 mx-5">
+          <section className="max-sm:w-[25rem] sm:w-[20rem] xl:w-[25rem] 2xl:w-[35rem]
+          flex 
+          justify-between
+          items-center 
+          max-sm:text-xs sm:text-base 2xl:text-xl 
+          font-semibold 
+          text-white 
+          mt-6 mx-5">
             <Link to="/"><h2>Home</h2></Link>
             <Link to="/about"><h2>About</h2></Link>
             <Link to="/projects"><h2>Projects</h2></Link>
             <Link to="/contact"><h2>Contact</h2></Link>
           </section>
-          <section className="mr-10 mt-6">
+          <section className="max-sm:mr-2 sm:mr-10 mt-6">
             <Link to="/about">
-              <div className="w-10 h-10 rounded-3xl text-md flex justify-center items-center font-semibold border-white border-2 bg-blue-300">
+              <div className="max-sm:w-7 sm:w-10 
+              max-sm:h-7 sm:h-10 
+              max-sm:text-xs sm:text-md
+              rounded-3xl flex justify-center items-center font-semibold border-white border-2 bg-blue-300">
                 RH
               </div>
             </Link>
           </section>
         </header>
-        <section className="w-full h-[45rem] overflow-hidden relative">
+        <section className="w-full 
+        max-sm:h-full sm:h-full lg:h-[30rem] 2xl:h-[45rem] 
+        overflow-hidden 
+        relative">
           <video className="" src={Skydive} ref={videoEl} muted/>
-          <div className=" absolute bottom-0 w-full h-28 bg-gradient-to-t from-gray-800"></div>
-          <img className="absolute bottom-20 w-[32rem] ml-28" src={Title} alt="Frontiers of Front End"/>
+          <div className="absolute bottom-0 w-full h-28 bg-gradient-to-t from-gray-800"></div>
+          <img className="absolute 
+          max-sm:bottom-5 sm:bottom-10 2xl:bottom-20 
+          max-sm:w-[9rem] sm:w-[15rem] lg:w-[20rem] 2xl:w-[32rem] 
+          max-sm:ml-5 sm:ml-20 xl:ml-24 2xl:ml-28" src={Title} alt="Frontiers of Front End"/>
         </section>
         <section className="flex flex-col">
           <FrameworksRow />
