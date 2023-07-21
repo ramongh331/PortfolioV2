@@ -25,7 +25,7 @@ export default function Home() {
         >
           {content}
         </h1>
-        <section className="flex justify-evenly w-full text-white font-semibold
+        <section className="flex justify-evenly items-center w-full h-24 text-white font-semibold
         max-sm:text-xs sm:text-3xl 2xl:text-6xl text-5xl 
         sm:mb-0 mb-20">
           <Link to="/about"><h2 className="p-3 hover:border-2 border-[#58c7f9]">About</h2></Link>
