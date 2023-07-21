@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { ExternalLink } from "react-external-link";
 
 
 export const ContactUs = () => {
@@ -35,13 +36,13 @@ export const ContactUs = () => {
           <h3 className="w-full border-b-2 border-white text-3xl font-semibold">Hire Me</h3>
           <p className="text-xl">Email: RamonGH331@gmail.com</p>
           <p className="text-xl">Location: Connecticut | Willing to Relocate</p>
-          <a
-            href="https://docs.google.com/document/d/1wiw12XV2FYtoqgWUFv-xZNhvhHL64YuPXFUGZoH5kQk/edit?usp=sharing"
+          <ExternalLink
+            href="https://docs.google.com/document/d/1MJJ1Zp0emiOn1I9aolUsWSZ4OC0Z7B-AgSi0rxy2bb4/edit?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
             <p className="text-xl">Resumè</p>
-          </a>
+          </ExternalLink>
         </section>
         <section className="w-[25rem]">
           <h3 className="w-full mb-2 border-b-2 border-white text-3xl font-semibold">Message Me</h3>

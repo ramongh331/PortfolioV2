@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ExternalLink } from "react-external-link";
 import DesignRow from "../components/DesignTools";
 import FrameworksRow from "../components/Frameworks";
 import LanguagesRow from "../components/Languages";
@@ -55,14 +56,18 @@ export default function Technology() {
             <Link to="/contact"><h2>Contact</h2></Link>
           </section>
           <section className="max-sm:mr-2 sm:mr-10">
-            <Link to="/about">
+          <ExternalLink
+            href="https://docs.google.com/document/d/1MJJ1Zp0emiOn1I9aolUsWSZ4OC0Z7B-AgSi0rxy2bb4/edit?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
               <div className="max-sm:w-7 sm:w-10 
               max-sm:h-7 sm:h-10 
               max-sm:text-xs sm:text-md
-              rounded-3xl flex justify-center items-center font-semibold border-white border-2 bg-blue-300">
+              rounded-3xl flex justify-center items-center font-semibold border-white border-2 bg-blue-300 text-black">
                 RH
               </div>
-            </Link>
+            </ExternalLink>
           </section>
         </header>
         <section className="w-full 

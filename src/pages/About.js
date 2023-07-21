@@ -9,6 +9,7 @@ import Back from "../public/images/back.png"
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ExternalLink } from "react-external-link";
 
 export default function About() {
   const [imgInView, setImgInView] = useState(0);
@@ -37,7 +38,7 @@ export default function About() {
       max-sm:h-fit sm:h-fit h-screen 
       font-display relative text-white">
       
-      <header className="lightBlueGlow border-2 border-[#58c7f9]
+      <header className="border-b-2 border-[#58c7f9]
         w-full 
         max-sm:h-10 sm:h-14 2xl:h-20 
         flex 
@@ -66,14 +67,18 @@ export default function About() {
             <Link to="/contact"><h2>Contact</h2></Link>
           </section>
           <section className="max-sm:mr-2 sm:mr-10">
-            <Link to="/about">
+            <ExternalLink
+            href="https://docs.google.com/document/d/1MJJ1Zp0emiOn1I9aolUsWSZ4OC0Z7B-AgSi0rxy2bb4/edit?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
               <div className="max-sm:w-7 sm:w-10 
               max-sm:h-7 sm:h-10 
               max-sm:text-xs sm:text-md
-              rounded-3xl flex justify-center items-center font-semibold border-black border-2 bg-blue-300 text-black">
+              rounded-3xl flex justify-center items-center font-semibold border-white border-2 bg-blue-300 text-black">
                 RH
               </div>
-            </Link>
+            </ExternalLink>
           </section>
         </header>
         
