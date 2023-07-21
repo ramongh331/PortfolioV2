@@ -28,11 +28,11 @@ export const ContactUs = () => {
   };
 
   return (
-    <section className="w-full h-[28rem] flex flex-col bg-yellow-1000">
+    <section className="w-full h-[28rem] flex flex-col bg-[#132932] text-white">
       <h2 className="text-6xl my-5 ml-10 font-bold">Let's Connect</h2>
       <section className="w-full h-full flex justify-around">
         <section className="w-[25rem] flex flex-col gap-2">
-          <h3 className="w-full border-b-2 border-black text-3xl font-semibold">Hire Me</h3>
+          <h3 className="w-full border-b-2 border-white text-3xl font-semibold">Hire Me</h3>
           <p className="text-xl">Email: RamonGH331@gmail.com</p>
           <p className="text-xl">Location: Connecticut | Willing to Relocate</p>
           <a
@@ -44,7 +44,7 @@ export const ContactUs = () => {
           </a>
         </section>
         <section className="w-[25rem]">
-          <h3 className="w-full mb-2 border-b-2 border-black text-3xl font-semibold">Message Me</h3>
+          <h3 className="w-full mb-2 border-b-2 border-white text-3xl font-semibold">Message Me</h3>
           <form className="flex flex-col gap-2" ref={form} onSubmit={sendEmail}>
             
               <input
@@ -72,7 +72,7 @@ export const ContactUs = () => {
           </form>
         </section>
         <section className="w-[25rem]">
-          <h3 className="w-full mb-2 border-b-2 border-black text-3xl font-semibold">Keep Connected</h3>
+          <h3 className="w-full mb-2 border-b-2 border-white text-3xl font-semibold">Keep Connected</h3>
           <section className="flex gap-5">
             <a
               href="https://www.linkedin.com/in/ramon-hernandez-web/"
