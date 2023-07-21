@@ -128,33 +128,33 @@ export default function ProjectsTest() {
 
 {/* Top Left Side Panel */}
        <div className={`lightBlueGlow w-[30rem] h-[10rem] bg-[#132933] border-2 border-[#58c7f9] absolute top-0 left-0 -skew-x-[30deg] -translate-x-12 ${navMotion} duration-1000 ease-in-out flex justify-center items-center`}>
-        <h1 className="tektur text-7xl text-[#91dcff]">Projects</h1>
+        <h1 className="tektur text-7xl text-white">Projects</h1>
        </div>
 
 {/* Navigation */}
        <div className={`absolute z-10 top-[40%] right-0 flex justify-center items-center ${navArrowFade} duration-[1500ms] ease-in-out cursor-pointer`} onClick={handleOpenNav}><img className="h-10" src={NavIcon} alt="Navigation Menu Button"/></div>
 
        <div className={`lightBlueGlow w-[22rem] h-[102%] border-2 border-[#58c7f9] bg-[#132933] absolute duration-1000 ease-in-out z-10 p-5 flex flex-col gap-10 items-center ${nav}`}>
-        <div className="text-[#91dcff] hover:text-black hover:bg-[#91dcff] font-bold text-xl text-center w-full cursor-pointer" onClick={handleCloseNav}>X</div>
+        <div className="text-white hover:text-black hover:bg-[#91dcff] font-bold text-xl text-center w-full cursor-pointer" onClick={handleCloseNav}>X</div>
 
         <Link className="cursor-pointer w-[95%] hover:border-2 border-[#58c7f9]" to="/">
-          <h2 className="tektur text-5xl text-[#91dcff] p-4">Home</h2>
+          <h2 className="tektur text-5xl text-white p-4">Home</h2>
         </Link>
         <Link className="cursor-pointer w-[95%] hover:border-2 border-[#58c7f9]" to="/about">
-          <h2 className="tektur text-5xl text-[#91dcff] p-4">About</h2>
+          <h2 className="tektur text-5xl text-white p-4">About</h2>
         </Link>
         <Link className="cursor-pointer w-[100%] hover:border-2 border-[#58c7f9]" to="/technology">
-          <h2 className="tektur text-5xl text-[#91dcff] p-4">Technology</h2>
+          <h2 className="tektur text-5xl text-white p-4">Technology</h2>
         </Link>
         <Link className="cursor-pointer w-[95%] hover:border-2 border-[#58c7f9]" to="/contact">
-          <h2 className="tektur text-5xl text-[#91dcff] p-4">Contact</h2>
+          <h2 className="tektur text-5xl text-white p-4">Contact</h2>
         </Link>
         
        </div>
 
 {/* Bottom Projects Panel */}
        <div className={`lightBlueGlow flex w-[102%] h-[10rem] border-2 border-[#58c7f9] bg-[#132933] absolute ${projectsPanel} duration-1000 ease-in-out`}>
-        <div className="w-full tektur flex text-5xl text-[#91dcff] justify-around items-center ">
+        <div className="w-full tektur flex text-5xl text-white justify-around items-center ">
           <h3 className="px-7 py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleSuperOpen}>Super</h3>
           <h3 className="px-7 py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleQueRicoOpen}>¡Qué Rico!</h3>
           <h3 className="px-7 py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleCLWOpen}>Cover Letter Writer</h3>

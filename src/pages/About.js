@@ -32,42 +32,59 @@ export default function About() {
 
   return (
     <>
-      <main className="bg-yellow-1000 
+      <main className="bg-[#132932]
       w-full 
       max-sm:h-fit sm:h-fit h-screen 
-      font-display relative">
+      font-display relative text-white">
       
-        <nav className="bg-[#362D28] w-full h-14">
-          <section className="mx-auto flex 
-          max-sm:w-full sm:w-full w-[40%] 
-          h-full
-          max-sm:justify-evenly sm:justify-evenly justify-between 
+      <header className="lightBlueGlow border-2 border-[#58c7f9]
+        w-full 
+        max-sm:h-10 sm:h-14 2xl:h-20 
+        flex 
+        justify-between 
+        items-center">
+          <Link to="/about">
+            <h1 className="font-bold 
+            max-sm:text-lg sm:text-2xl 
+            max-sm:ml-2 sm:ml-10 
+            text-[#1be783] 
+            ">
+              About
+            </h1>
+          </Link>
+          <section className="max-sm:w-[25rem] sm:w-[20rem] xl:w-[25rem] 2xl:w-[35rem]
+          flex 
+          justify-between
           items-center 
-          max-sm:text-xs text-xl 
-          text-white">
-            <Link to="/">
-              <h2>Home</h2>
-            </Link>
-            <Link to="/technology">
-              <h2>Technology</h2>
-            </Link>
-            <Link to="/projects">
-              <h2>Projects</h2>
-            </Link>
-            <Link to="/contact">
-              <h2>Contact</h2>
+          max-sm:text-xs sm:text-base 2xl:text-xl 
+          font-semibold 
+          text-white 
+          mx-5">
+            <Link to="/"><h2>Home</h2></Link>
+            <Link to="/technology"><h2>Technology</h2></Link>
+            <Link to="/projects"><h2>Projects</h2></Link>
+            <Link to="/contact"><h2>Contact</h2></Link>
+          </section>
+          <section className="max-sm:mr-2 sm:mr-10">
+            <Link to="/about">
+              <div className="max-sm:w-7 sm:w-10 
+              max-sm:h-7 sm:h-10 
+              max-sm:text-xs sm:text-md
+              rounded-3xl flex justify-center items-center font-semibold border-black border-2 bg-blue-300 text-black">
+                RH
+              </div>
             </Link>
           </section>
-        </nav>
+        </header>
         
         <div className="flex flex-col-reverse
         justify-evenly items-center mt-10">
           <div className="max-sm:w-11/12 sm:w-11/12 lg:w-10/12 2xl:w-8/12 min-2xl:w-7/12
           h-full">
-            <section className="
+            <section className="lightBlueGlow
             max-sm:mb-5 sm:mb-5
             max-sm:p-8 p-10 
-            bg-[#362D28] text-white rounded-3xl">
+            border-2 border-[#58c7f9] text-white">
             <h3 className="max-sm:text-3xl text-6xl 
             mb-6 
             font-semibold">About</h3>
@@ -92,11 +109,12 @@ export default function About() {
               <article className="text-center">
                 <h2 className="max-sm:text-2xl text-5xl">Choose Your Ramón</h2>
               </article>
-              <div className="flex">
+              <div className="flex mb-5 mt-5">
                 <button onClick={handleBack}>
                 <img src={Back} alt="Back button"/>
                 </button>
-                <article className="max-sm:w-full sm:w-full lg:w-9/12 max-w-[40rem] 
+                <article className="lightBlueGlow border-2 border-[#58c7f9]
+                max-sm:w-full sm:w-full lg:w-9/12 max-w-[40rem] 
                 max-sm:h-fit h-[45rem] 
                 overflow-hidden 
                 flex 

@@ -24,8 +24,8 @@ export default function Technology() {
   
   return (
     <>
-      <main className="bg-gray-800 w-full h-full relative">
-        <header className="bg-gradient-to-b from-gray-800 
+      <main className="bg-[#132932] w-full h-full relative">
+        <header className="bg-gradient-to-b from-[#132932] 
         w-full 
         max-sm:h-10 sm:h-14 2xl:h-20 
         flex 
@@ -36,7 +36,6 @@ export default function Technology() {
             <h1 className="font-bold 
             max-sm:text-lg sm:text-2xl 
             max-sm:ml-2 sm:ml-10 
-            mt-6
             text-[#1be783] 
             ">
               Skills+
@@ -49,13 +48,13 @@ export default function Technology() {
           max-sm:text-xs sm:text-base 2xl:text-xl 
           font-semibold 
           text-white 
-          mt-6 mx-5">
+          mx-5">
             <Link to="/"><h2>Home</h2></Link>
             <Link to="/about"><h2>About</h2></Link>
             <Link to="/projects"><h2>Projects</h2></Link>
             <Link to="/contact"><h2>Contact</h2></Link>
           </section>
-          <section className="max-sm:mr-2 sm:mr-10 mt-6">
+          <section className="max-sm:mr-2 sm:mr-10">
             <Link to="/about">
               <div className="max-sm:w-7 sm:w-10 
               max-sm:h-7 sm:h-10 
@@ -71,7 +70,7 @@ export default function Technology() {
         overflow-hidden 
         relative">
           <video className="" src={Skydive} ref={videoEl} muted/>
-          <div className="absolute bottom-0 w-full h-28 bg-gradient-to-t from-gray-800"></div>
+          <div className="absolute bottom-0 w-full h-28 bg-gradient-to-t from-[#132932]"></div>
           <img className="absolute 
           max-sm:bottom-5 sm:bottom-10 2xl:bottom-20 
           max-sm:w-[9rem] sm:w-[15rem] lg:w-[20rem] 2xl:w-[32rem] 
