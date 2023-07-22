@@ -93,8 +93,8 @@ export default function ProjectsTest() {
 
 {/* Projects Info */}         
           <div className={`w-[90%] h-[86%] flex flex-col items-center justify-center ${navArrowFade} duration-[1500ms] ease-in-out absolute`}>
-            <div className="border-2 border-[#58c7f9] 
-            sm:w-[90%] 2xl:w-[80%] 
+            <div className="sm:border-2 border-[#58c7f9] 
+            max-sm:w-full sm:w-[90%] 2xl:w-[80%] 
             sm:h-fit lg:h-[40%] 2xl:h-fit min-[1920px]:h-[50%]
             overflow-auto">
               <img className={`w-full ${superOpen} `} src="https://i.imgur.com/cXvJHdf.png" alt="Home Page of Super Website"/>
@@ -102,57 +102,67 @@ export default function ProjectsTest() {
               <img className={`w-full ${clwOpen} `} src="https://i.imgur.com/bPwqnek.png" alt="Home Page of Cover Letter Writer Website"/>
               <img className={`w-full ${jobifyOpen} `} src="https://i.imgur.com/Rfbv60O.png" alt="Home Page of Jobify Website"/>
             </div>
-            <div className="border-x-2 border-b-2 border-[#58c7f9] 
-            sm:w-[90%] 2xl:w-[80%] 
-            sm:h-[13rem] lg:h-[10rem] 2xl:h-[20rem] min-[1920px]:h-[15rem]
+            <div className="sm:border-x-2 sm:border-b-2 border-[#58c7f9] 
+            max-sm:w-full sm:w-[90%] 2xl:w-[80%] 
+            max-sm:h-[50%] sm:h-[13rem] lg:h-[10rem] 2xl:h-[20rem] min-[1920px]:h-[15rem]
             overflow-auto">
               {/* Super */}
-              <div className={`w-full h-full text-white px-4 ${superOpen}`}>
-                <div className="w-full h-fit  flex justify-between items-center">
-                  <p className="text-5xl mb-2 mt-2">Super</p>
-                  <div className="w-48 flex justify-between box-border">
+              <div className={`w-full h-full text-white px-4 ${superOpen} max-sm:text-center`}>
+                <div className="w-full h-fit 
+                flex max-sm:flex-col-reverse 
+                justify-between items-center">
+                  <p className="max-sm:text-3xl sm:text-5xl mb-2 mt-2">Super</p>
+                  <div className="w-48 flex justify-between box-border max-sm:mt-2">
                     <ExternalLink href="https://super-app-nine.vercel.app/" target="_blank" className="hover:bg-[#58c7f9] hover:text-black px-2"><button>Live Site</button></ExternalLink>
                     <ExternalLink href="https://github.com/ramongh331/super-frontend" target="_blank" className="hover:bg-[#58c7f9] hover:text-black px-2"><button>GitHub</button></ExternalLink>
                   </div>
                 </div>
-                <p className="text-2xl mb-5">Next.js | Next-Auth | Tailwind CSS | MongoDB | MongoClient</p>
-                <p className="text-xl">Super is made to be a social platform where users can create a profile as a super being, view, edit, and delete their profiles, and view other people's profiles. The website uses Google Provider for easy sign-in with Gmail accounts. Although messaging and image uploads are not yet available, they will be added in the future. The website ensures user security by only displaying edit and delete buttons on a user's own profile. Super was made for superhero enthusiasts to connect and share their love for all things super.</p>
+                <p className="max-sm:text-lg sm:text-2xl mb-5">Next.js | Next-Auth | Tailwind CSS | MongoDB | MongoClient</p>
+                <p className="max-sm:text-base sm:text-xl">Super is made to be a social platform where users can create a profile as a super being, view, edit, and delete their profiles, and view other people's profiles. The website uses Google Provider for easy sign-in with Gmail accounts. Although messaging and image uploads are not yet available, they will be added in the future. The website ensures user security by only displaying edit and delete buttons on a user's own profile. Super was made for superhero enthusiasts to connect and share their love for all things super.</p>
               </div>
               {/* ¡Qué Rico! Personal Cookbook */}
-              <div className={`w-full h-full text-white px-4 ${queRicoOpen}`}>
-              <div className="w-full h-fit  flex justify-between items-center">
-                  <p className="text-5xl mb-2 mt-2">¡Qué Rico!</p>
-                  <div className="w-48 flex justify-between box-border">
+              <div className={`w-full h-full text-white px-4 ${queRicoOpen} max-sm:text-center`}>
+              <div className="w-full h-fit 
+              flex max-sm:flex-col-reverse
+              justify-between items-center">
+                  <p className="max-sm:text-3xl sm:text-5xl 
+                  mb-2 mt-2">¡Qué Rico!</p>
+                  <div className="w-48 flex justify-between box-border mt-2">
                     <ExternalLink href="https://allergy-free-cookbook-9efx.onrender.com/" target="_blank" className="hover:bg-[#58c7f9] hover:text-black px-2"><button>Live Site</button></ExternalLink>
                     <ExternalLink href="https://github.com/ramongh331/Allergy-Free-Cookbook" target="_blank" className="hover:bg-[#58c7f9] hover:text-black px-2"><button>GitHub</button></ExternalLink>
                   </div>
                 </div>
-                <p className="text-2xl mb-5">Javascript | CSS | Express | EJS | MongoDB | Render.com</p>
-                <p className="text-xl">¡Qué Rico!, the personal cookbook allows users to input recipes into their account. Users will be able to add the recipe's name, level of difficulty, ingredients, and steps, and they can check off boxes to indicate which allergens are not included.</p>
+                <p className="max-sm:text-lg sm:text-2xl mb-5">Javascript | CSS | Express | EJS | MongoDB | Render.com</p>
+                <p className="max-sm:text-base sm:text-xl">¡Qué Rico!, the personal cookbook allows users to input recipes into their account. Users will be able to add the recipe's name, level of difficulty, ingredients, and steps, and they can check off boxes to indicate which allergens are not included.</p>
               </div>
               {/* Cover Letter Writer*/}
-              <div className={`w-full h-full text-white px-4 ${clwOpen}`}>
-              <div className="w-full h-fit  flex justify-between items-center">
-                  <p className="text-5xl mb-2 mt-2">Cover Letter Writer</p>
-                  <div className="w-48 flex justify-between box-border">
+              <div className={`w-full h-full text-white px-4 ${clwOpen} max-sm:text-center`}>
+              <div className="w-full h-fit 
+              flex max-sm:flex-col-reverse
+              justify-between items-center">
+                  <p className="max-sm:text-3xl sm:text-5xl 
+                  mb-2 mt-2">Cover Letter Writer</p>
+                  <div className="w-48 flex justify-between box-border mt-2">
                     <ExternalLink href="https://cover-letter-writer.vercel.app/" target="_blank" className="hover:bg-[#58c7f9] hover:text-black px-2"><button>Live Site</button></ExternalLink>
                     <ExternalLink href="https://github.com/ramongh331/coverLetter-frontend" target="_blank" className="hover:bg-[#58c7f9] hover:text-black px-2"><button>GitHub</button></ExternalLink>
                   </div>
                 </div>
-                <p className="text-2xl mb-5">React | Javascript | Tailwind CSS | CSS | Vercel.com</p>
-                <p className="text-xl">The Cover Letter Writer is a full-stack app I built using Python, Django, React, and Tailwind CSS. It allows users to generate a cover letter from their input. The backend is hosted on Render.com and the frontend on Vercel.com. A main challenge was setting the height using Tailwind on the show page, which I resolved by adjusting the height setting based on screen size. A lesson I learned was to use conditional background colors based on page URLs to avoid hard coding colors and height. Please allow time for the backend to turn on.</p>
+                <p className="max-sm:text-lg sm:text-2xl mb-5">React | Javascript | Tailwind CSS | CSS | Vercel.com</p>
+                <p className="max-sm:text-base sm:text-xl">The Cover Letter Writer is a full-stack app I built using Python, Django, React, and Tailwind CSS. It allows users to generate a cover letter from their input. The backend is hosted on Render.com and the frontend on Vercel.com. A main challenge was setting the height using Tailwind on the show page, which I resolved by adjusting the height setting based on screen size. A lesson I learned was to use conditional background colors based on page URLs to avoid hard coding colors and height. Please allow time for the backend to turn on.</p>
               </div>
               {/* Cover Letter Writer*/}
-              <div className={`w-full h-full text-white px-4 ${jobifyOpen}`}>
-              <div className="w-full h-fit  flex justify-between items-center">
-                  <p className="text-5xl mb-2 mt-2">Jobify</p>
-                  <div className="w-48 flex justify-between box-border">
+              <div className={`w-full h-full text-white px-4 ${jobifyOpen} max-sm:text-center`}>
+              <div className="w-full h-fit 
+              flex max-sm:flex-col-reverse
+              justify-between items-center">
+                  <p className="max-sm:text-3xl sm:text-5xl mb-2 mt-2">Jobify</p>
+                  <div className="w-48 flex justify-between box-border mt-2">
                     <ExternalLink href="https://effortless-cajeta-61b011.netlify.app/" target="_blank" className="hover:bg-[#58c7f9] hover:text-black px-2"><button>Live Site</button></ExternalLink>
                     <ExternalLink href="https://github.com/ramongh331/Jobify_Frontend" target="_blank" className="hover:bg-[#58c7f9] hover:text-black px-2"><button>GitHub</button></ExternalLink>
                   </div>
                 </div>
-                <p className="text-2xl mb-5">React | HTML | CSS | Javascript | Express</p>
-                <p className="text-xl">A full CRUD app that allows users to enter in specific job application information and save it in one central location.</p>
+                <p className="max-sm:text-lg sm:text-2xl mb-5">React | HTML | CSS | Javascript | Express</p>
+                <p className="max-sm:text-base sm:text-xl">A full CRUD app that allows users to enter in specific job application information and save it in one central location.</p>
               </div>
             </div>
           </div>
@@ -228,16 +238,25 @@ export default function ProjectsTest() {
 
 
 {/* Bottom Projects Panel */}
-       <div className={`lightBlueGlow flex w-[102%] 
-       sm:h-[8rem] lg:h-[5rem] 2xl:h-[10rem] 
+       <div className={`lightBlueGlow flex w-[101%] 
+       max-sm:h-[5rem] sm:h-[8rem] lg:h-[5rem] 2xl:h-[10rem] 
        border-2 border-[#58c7f9] bg-[#132933] absolute ${projectsPanel} duration-1000 ease-in-out`}>
         <div className="w-full flex text-white justify-around items-center  
-        sm:text-2xl 2xl:text-5xl
+        max-sm:text-xs sm:text-2xl 2xl:text-5xl
         text-center">
-          <h3 className="px-7 py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleSuperOpen}>Super</h3>
-          <h3 className="px-7 py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleQueRicoOpen}>¡Qué Rico!</h3>
-          <h3 className="px-7 py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleCLWOpen}>Cover Letter Writer</h3>
-          <h3 className="px-7 py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleJobifyOpen}>Jobify</h3>
+          <h3 className="
+          max-sm:px-3 sm:px-7 
+          py-2 
+          hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleSuperOpen}>Super</h3>
+          <h3 className="
+          max-sm:px-3 sm:px-7 
+          py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleQueRicoOpen}>¡Qué Rico!</h3>
+          <h3 className="
+          max-sm:px-3 sm:px-7 
+          py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleCLWOpen}>Cover Letter Writer</h3>
+          <h3 className="
+          max-sm:px-3 sm:px-7 
+          py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleJobifyOpen}>Jobify</h3>
         </div>
        </div>
 
