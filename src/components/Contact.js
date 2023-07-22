@@ -32,11 +32,10 @@ export const ContactUs = () => {
 
   return (
     <section className="w-full 
-    max-sm:h-full sm:h-full xl:h-[28rem] 2xl:h-screen min-[1920px]:h-[28rem] 
-    flex flex-col bg-[#132932] text-white">
+    max-sm:h-full sm:h-full xl:h-[28rem] 2xl:h-full min-[1920px]:h-[28rem] 
+    flex flex-col bg-[#132932] text-white mb-10"> 
       <h2 className="max-sm:text-3xl sm:text-5xl 2xl:text-6xl min-[1920px]:text-6xl 
       my-5 
-      2xl:ml-10 
       font-bold
       text-center">Let's Connect</h2>
       <section className="w-full h-full 
@@ -92,8 +91,7 @@ export const ContactUs = () => {
         </section>
 
         {/* Keep Connected Section */}
-        <section className="max-sm:w-[90%] sm:w-[25rem] lg:w-[15rem] xl:w-[20rem] min-[1920px]:w-[25rem]
-        mb-10">
+        <section className="max-sm:w-[90%] sm:w-[25rem] lg:w-[15rem] xl:w-[20rem] min-[1920px]:w-[25rem]">
           <h3 className="w-full mb-2 border-b-2 border-white max-sm:text-2xl sm:text-3xl font-semibold">Keep Connected</h3>
           <section className="flex gap-5">
             <a

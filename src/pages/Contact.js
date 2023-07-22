@@ -17,7 +17,7 @@ export default function Contact() {
   
   return (
     <>
-      <main className="w-full h-full bg-[#132932] text-white relative overflow-hidden">
+      <main className="w-full max-sm:h-full sm:h-full 2xl:h-screen min-[1920px]:h-full bg-[#132932] text-white relative overflow-hidden">
       <header className="border-b-2 border-[#58c7f9]
         w-full 
         max-sm:h-10 sm:h-14 2xl:h-20 
