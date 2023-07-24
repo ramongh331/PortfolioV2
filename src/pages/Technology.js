@@ -10,6 +10,8 @@ import NavIcon from "../public/images/ProjectsImages/HamBurgMenu.png"
 
 export default function Technology() {
   const [nav, setNav] = useState("-right-[100%]")
+  const [topNav, setTopNav] = useState("-translate-y-20");
+  const [videoIntro, setVideoIntro] = useState("-translate-y-[100%]");
 
   const videoEl = useRef(null);
 
@@ -32,16 +34,31 @@ export default function Technology() {
     setNav("-right-[100%]")
   }
 
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      onLoad();
+    } else {
+      window.addEventListener("load", onLoad)
+    }
+  }, [])
+
+  const onLoad = () => {
+      setTimeout(() => {setTopNav("translate-y-0")}, 200)
+      setTimeout(() => {setVideoIntro("translate-y-0")}, 500)
+      
+  
+  } 
+
   return (
     <>
       <main className="bg-[#132932] w-full h-full relative overflow-hidden">
-        <header className="bg-gradient-to-b from-[#132932] 
+        <header className={`${topNav} ease-in-out duration-1000 bg-gradient-to-b from-[#132932] 
         w-full 
         max-sm:h-10 sm:h-14 2xl:h-20 
         flex 
         justify-between 
         items-center
-        z-10 fixed">
+        z-10 fixed`}>
           <Link to="/technology">
             <h1 className="font-bold 
             max-sm:text-lg sm:text-2xl 
@@ -80,7 +97,7 @@ export default function Technology() {
           </section>
         </header>
 {/* Max Small (Mobile) Nav */}
-<div className={`sm:hidden absolute z-10 top-[.45rem] right-2 flex justify-center items-center duration-[1500ms] ease-in-out cursor-pointer`} onClick={handleOpenNav}><img className="h-5" src={NavIcon} alt="Navigation Menu Button"/></div>
+<div className={`sm:hidden absolute z-10 top-[.45rem] right-2 flex justify-center items-center duration-[1500ms] ease-in-out cursor-pointer`} onClick={handleOpenNav}><img className={`${topNav} ease-in-out duration-500 h-5`} src={NavIcon} alt="Navigation Menu Button"/></div>
 
 <div className={`lightBlueGlow w-[22rem] h-[102%] border-2 border-[#58c7f9] bg-[#132933] absolute duration-1000 ease-in-out z-10 p-5 flex flex-col gap-10 items-center ${nav}`}>
  <div className="text-white hover:text-black hover:bg-[#91dcff] font-bold text-xl text-center w-full cursor-pointer" onClick={handleCloseNav}>X</div>
@@ -100,10 +117,11 @@ export default function Technology() {
  
 </div>
 
-        <section className="w-full 
+        <section className={`${videoIntro} ease-in-out duration-1000
+        w-full 
         max-sm:h-full sm:h-full lg:h-[30rem] 2xl:h-[45rem] 
         overflow-hidden 
-        relative">
+        relative`}>
           <video className="" src={Skydive} ref={videoEl} muted playsInline/>
           <div className="absolute bottom-0 w-full h-28 bg-gradient-to-t from-[#132932]"></div>
           <img className="absolute 

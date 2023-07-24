@@ -14,6 +14,7 @@ export default function DesignRow() {
   // Design
   const [DesignImgInView, setDesignImgInView] = useState(0);
   const [hideBackNext, setHideBackNext] = useState("")
+  const [designFade, setDesignFade] = useState("opacity-0")
   let width = window.innerWidth
 
   useEffect(() => {
@@ -21,6 +22,19 @@ export default function DesignRow() {
       setHideBackNext("hidden")
     }
   }, [width])
+
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      onLoad();
+    } else {
+      window.addEventListener("load", onLoad)
+    }
+  }, [])
+
+  const onLoad = () => {
+      setTimeout(() => {setDesignFade("opacity-100")}, 1600)
+  
+  }
 
   const designMoveStyle = {
     transform: `translateX(-${DesignImgInView}%)`,
@@ -80,8 +94,9 @@ export default function DesignRow() {
     <>
 
   {/* Design Tools Row */}
-  <section className="max-sm:pl-5 sm:pl-20 2xl:pl-28 
-  relative overflow-hidden mb-10">
+  <section className={`${designFade} ease-in-out duration-500
+  max-sm:pl-5 sm:pl-20 2xl:pl-28 
+  relative overflow-hidden mb-10`}>
     <section className="">
       <h3 className="max-sm:text-base sm:text-2xl text-white">Design Tools</h3>
       <section className="w-full relative">

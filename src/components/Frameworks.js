@@ -14,6 +14,8 @@ export default function FrameworksRow() {
   // Libraries & Frameworks
   const [frameWorksImgInView, setFrameWorksImgInView] = useState(0);
   const [hideBackNext, setHideBackNext] = useState("")
+  const [frameworkFade, setFrameworkFade] = useState("opacity-0")
+
   let width = window.innerWidth
   
   useEffect(() => {
@@ -21,6 +23,19 @@ export default function FrameworksRow() {
       setHideBackNext("hidden")
     }
   }, [width])
+
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      onLoad();
+    } else {
+      window.addEventListener("load", onLoad)
+    }
+  }, [])
+
+  const onLoad = () => {
+      setTimeout(() => {setFrameworkFade("opacity-100")}, 1400)
+  
+  } 
 
   const frameWorksMoveStyle = {
     transform: `translateX(-${frameWorksImgInView}%)`,
@@ -79,11 +94,12 @@ export default function FrameworksRow() {
 
   return (
     <>
-  <section className="max-sm:pl-5 sm:pl-20 xl:pl-24 2xl:pl-28 
+  <section className={`${frameworkFade} ease-in-out duration-500 
+  max-sm:pl-5 sm:pl-20 xl:pl-24 2xl:pl-28 
   mb-5
   relative 
   overflow-hidden 
-  ">
+  `}>
     <section className="">
       <h3 className="max-sm:text-base sm:text-2xl 
       text-white mt-5">Libraries & Frameworks</h3>

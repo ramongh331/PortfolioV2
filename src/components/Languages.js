@@ -12,6 +12,7 @@ export default function LanguagesRow() {
   // Languages
   const [languageImgInView, setLanguageImgInView] = useState(0);
   const [hideBackNext, setHideBackNext] = useState("")
+  const [languageFade, setLanguageFade] = useState("opacity-0")
   let width = window.innerWidth
 
   useEffect(() => {
@@ -19,6 +20,19 @@ export default function LanguagesRow() {
       setHideBackNext("hidden")
     }
   }, [width])
+
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      onLoad();
+    } else {
+      window.addEventListener("load", onLoad)
+    }
+  }, [])
+
+  const onLoad = () => {
+      setTimeout(() => {setLanguageFade("opacity-100")}, 1500)
+  
+  }
   
   
   const languagesMoveStyle = {
@@ -62,11 +76,12 @@ export default function LanguagesRow() {
 
   return (
     <>
-  <section className="max-sm:pl-5 sm:pl-20 xl:pl-24 2xl:pl-28 
+  <section className={`${languageFade} ease-in-out duration-500
+  max-sm:pl-5 sm:pl-20 xl:pl-24 2xl:pl-28 
   mb-5
   relative 
   overflow-hidden 
-  ">
+  `}>
     <section className="">
       <h3 className="max-sm:text-base sm:text-2xl text-white">Languages</h3>
       <section className="w-full relative">
