@@ -122,7 +122,7 @@ export default function Technology() {
         max-sm:h-full sm:h-full lg:h-[30rem] 2xl:h-[45rem] 
         overflow-hidden 
         relative`}>
-          <video className="" src={Skydive} ref={videoEl} muted playsInline/>
+          <video src={Skydive} ref={videoEl} alt="Ramon tandem skydiving" muted playsInline/>
           <div className="absolute bottom-0 w-full h-28 bg-gradient-to-t from-[#132932]"></div>
           <img className="absolute 
           max-sm:bottom-5 sm:bottom-10 2xl:bottom-20 

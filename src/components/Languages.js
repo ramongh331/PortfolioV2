@@ -88,19 +88,19 @@ export default function LanguagesRow() {
         <div className="w-fit 
         max-sm:h-36 sm:h-52 flex items-center duration-300 ease-in-out" style={languagesMoveStyle}>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={HTML} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={HTML} alt="A man standing on the frame of a house with the word HTML to the right of him"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={JS} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={JS} alt="A blurred computer with code behind a pair of eye-glasses with the word Java Script above"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={CSS} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={CSS} alt="A kid with paint covered hands holding a mechanical pencil and paint brush with the word CSS above"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Sass} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Sass} alt="Colored pencils in the top left, a hand holding a pencil in the bottom right, and the word Sass in the center"/></div>
         </div>
       </section>
     </section>
     {/* There are not enough cards to use the arrow function */}
-        <img className={`max-sm:h-10 sm:h-12 absolute top-1/2 left-2 ${hideBackNext}`} onClick={handleLanguageBack} src={backBtn} alt="white back arrow"/>
-        <img className={`max-sm:h-10 sm:h-12 absolute top-1/2 right-2 ${hideBackNext}`} onClick={handleLanguageNext} src={nextBtn} alt="white next arrow"/>
+        <img className={`max-sm:h-10 sm:h-12 absolute top-1/2 left-2 ${hideBackNext}`} onClick={handleLanguageBack} src={backBtn} alt="back arrow"/>
+        <img className={`max-sm:h-10 sm:h-12 absolute top-1/2 right-2 ${hideBackNext}`} onClick={handleLanguageNext} src={nextBtn} alt="next arrow"/>
   </section>
     </>
   );

@@ -103,7 +103,7 @@ export default function Contact() {
         <h2 className={`${topQuestionFade} ease-in-out duration-500
         bebas max-sm:text-4xl sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl text-center 
         max-sm:mt-5 sm:mt-5 2xl:mt-10 mb-5`}>Are you Team Ramón?</h2>
-        <img className={`${ramonImgFade} ease-in-out duration-500 mx-auto max-sm:w-[90%] sm:w-[90%] lg:w-[60%]`} src={TeamRamon} alt="" />
+        <img className={`${ramonImgFade} ease-in-out duration-500 mx-auto max-sm:w-[90%] sm:w-[90%] lg:w-[60%]`} src={TeamRamon} alt="The group of Ramons in a V-formation" />
         <ContactUs />
       </main>
     </>

@@ -103,24 +103,24 @@ export default function DesignRow() {
         <div className="w-fit 
         max-sm:h-36 sm:h-52 flex items-center duration-300 ease-in-out" style={designMoveStyle}>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Figma} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Figma} alt="A man with headphones looking at a blurred monitor with the word Figma to the left"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={XD} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={XD} alt="A brick apartment building with the words Adobe XD above"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={PS} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={PS} alt="An old camera with the word Photoshop above"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={AI} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={AI} alt="Painted illustration of old mechanical garage surrounded by cars with the words Adobe Illustrator in the top right"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={AE} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={AE} alt="A cartridge of lipstick open on a magazine. The word After is written in red about a crossed out word of Special above the word Effect."/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Premiere} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Premiere} alt="An old projector surrounded by smoke with the words Premiere Pro above"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Procreate} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={Procreate} alt="Someone holding a stylus, drawing on a tablet with the word Procreate on the bottom"/></div>
         </div>
       </section>
     </section>
-        <img className={`max-sm:h-10 sm:h-12 absolute top-1/2 left-2 cursor-pointer ${hideBackNext}`} onClick={handleDesignBack} src={backBtn} alt="white back arrow"/>
-        <img className={`max-sm:h-10 sm:h-12 absolute top-1/2 right-2 cursor-pointer ${hideBackNext}`} onClick={handleDesignNext} src={nextBtn} alt="white next arrow"/>
+        <img className={`max-sm:h-10 sm:h-12 absolute top-1/2 left-2 cursor-pointer ${hideBackNext}`} onClick={handleDesignBack} src={backBtn} alt="back arrow"/>
+        <img className={`max-sm:h-10 sm:h-12 absolute top-1/2 right-2 cursor-pointer ${hideBackNext}`} onClick={handleDesignNext} src={nextBtn} alt="next arrow"/>
   </section>
 
     

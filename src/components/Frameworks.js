@@ -108,26 +108,26 @@ export default function FrameworksRow() {
         max-sm:h-36 sm:h-52 flex items-center duration-300 ease-in-out" style={frameWorksMoveStyle}>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
           max-sm:h-[8rem] sm:h-[11rem] 
-          rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ReactImg} alt=""/></div>
+          rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ReactImg} alt="Woman with glasses looking up with the word React on the bottom"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NextImg} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NextImg} alt="The word Next hidden within some trees"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NodeImg} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={NodeImg} alt="A man with a skull mask around his mouth with the word Node to the right"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={TWImg} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={TWImg} alt="A man staring out to the view of mountains with the word Tailwind in the sky"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={BSImg} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={BSImg} alt="Several soldiers walking into a plane with the word Bootstrap in the top left"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={MUIImg} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={MUIImg} alt="An old floating cart amongst other old cars with the word Material-UI above"/></div>
           <div className="max-sm:w-[13rem] sm:w-[19rem] 
-          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ExpressImg} alt=""/></div>
+          max-sm:h-[8rem] sm:h-[11rem] rounded-xl mr-7 overflow-hidden duration-200 ease-in-out hover:border-4 hover:scale-110"><img className="" src={ExpressImg} alt="Inside an old style railway car with the word Express.js above"/></div>
         </div>
       </section>
     </section>
         <img className={`max-sm:h-10 sm:h-12 
-        absolute top-1/2 left-2 cursor-pointer ${hideBackNext}`} onClick={handleFrameWorksBack} src={backBtn} alt="white back arrow"/>
+        absolute top-1/2 left-2 cursor-pointer ${hideBackNext}`} onClick={handleFrameWorksBack} src={backBtn} alt="back arrow"/>
         <img className={`max-sm:h-10 sm:h-12 
-        absolute top-1/2 right-2 cursor-pointer ${hideBackNext}`} onClick={handleFrameWorksNext} src={nextBtn} alt="white next arrow"/>
+        absolute top-1/2 right-2 cursor-pointer ${hideBackNext}`} onClick={handleFrameWorksNext} src={nextBtn} alt="next arrow"/>
   </section>
     
     </>
