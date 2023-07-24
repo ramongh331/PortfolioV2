@@ -20,10 +20,16 @@ export default function ProjectsTest() {
     const [nav, setNav] = useState("-right-[100%]")
     
     // Show Different Projects States
-    const [superOpen, setSuperOpen] = useState("hidden")
+    const [superOpen, setSuperOpen] = useState("")
     const [queRicoOpen, setQueRicoOpen] = useState("hidden")
     const [clwOpen, setCLWOpen] = useState("hidden")
     const [jobifyOpen, setJobifyOpen] = useState("hidden")
+
+    // Active Buttons
+    const [superActive, setSuperActive] = useState("border-2")
+    const [queRicoActive, setQueRicoActive] = useState("")
+    const [clwActive, setCLWActive] = useState("")
+    const [jobifyActive, setJobifyActive] = useState("")
 
     useEffect(() => {
       if (document.readyState === "complete") {
@@ -55,24 +61,44 @@ export default function ProjectsTest() {
     setQueRicoOpen("hidden")
     setCLWOpen("hidden")
     setJobifyOpen("hidden")
+
+    setSuperActive("border-2")
+    setQueRicoActive(" ")
+    setCLWActive(" ")
+    setJobifyActive(" ")
   }
   const handleQueRicoOpen = () => {
     setSuperOpen("hidden")
     setQueRicoOpen("visible")
     setCLWOpen("hidden")
     setJobifyOpen("hidden")
+
+    setSuperActive(" ")
+    setQueRicoActive("border-2")
+    setCLWActive(" ")
+    setJobifyActive(" ")
   }
   const handleCLWOpen = () => {
     setSuperOpen("hidden")
     setQueRicoOpen("hidden")
     setCLWOpen("visible")
     setJobifyOpen("hidden")
+
+    setSuperActive(" ")
+    setQueRicoActive(" ")
+    setCLWActive("border-2")
+    setJobifyActive(" ")
   }
   const handleJobifyOpen = () => {
     setSuperOpen("hidden")
     setQueRicoOpen("hidden")
     setCLWOpen("hidden")
     setJobifyOpen("visible")
+
+    setSuperActive(" ")
+    setQueRicoActive(" ")
+    setCLWActive(" ")
+    setJobifyActive("border-2")
   }
   
 
@@ -244,19 +270,19 @@ export default function ProjectsTest() {
         <div className="w-full flex text-white justify-around items-center  
         max-sm:text-xs sm:text-2xl 2xl:text-5xl
         text-center">
-          <h3 className="
+          <h3 className={`${superActive}
           max-sm:px-3 sm:px-7 
           py-2 
-          hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleSuperOpen}>Super</h3>
-          <h3 className="
+          hover:border-2 border-[#58c7f9] cursor-pointer`} onClick={handleSuperOpen}>Super</h3>
+          <h3 className={`${queRicoActive}
           max-sm:px-3 sm:px-7 
-          py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleQueRicoOpen}>¡Qué Rico!</h3>
-          <h3 className="
+          py-2 hover:border-2 border-[#58c7f9] cursor-pointer`} onClick={handleQueRicoOpen}>¡Qué Rico!</h3>
+          <h3 className={`${clwActive}
           max-sm:px-3 sm:px-7 
-          py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleCLWOpen}>Cover Letter Writer</h3>
-          <h3 className="
+          py-2 hover:border-2 border-[#58c7f9] cursor-pointer`} onClick={handleCLWOpen}>Cover Letter Writer</h3>
+          <h3 className={`${jobifyActive}
           max-sm:px-3 sm:px-7 
-          py-2 hover:border-2 border-[#58c7f9] cursor-pointer" onClick={handleJobifyOpen}>Jobify</h3>
+          py-2 hover:border-2 border-[#58c7f9] cursor-pointer`} onClick={handleJobifyOpen}>Jobify</h3>
         </div>
        </div>
 
