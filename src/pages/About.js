@@ -111,7 +111,7 @@ export default function About() {
           </section>
         </header>
         {/* Max Small (Mobile) Nav */}
-  <div className={`sm:hidden absolute z-10 top-[.45rem] right-2 flex justify-center items-center duration-[1500ms] ease-in-out cursor-pointer`} onClick={handleOpenNav}><img className="h-5" src={NavIcon} alt="Navigation Menu Button"/></div>
+  <div className={`sm:hidden absolute z-10 top-[.45rem] right-2 flex justify-center items-center duration-[1500ms] ease-in-out cursor-pointer`} onClick={handleOpenNav}><img className={`${topNav} ease-in-out duration-500 h-5`} src={NavIcon} alt="Navigation Menu Button"/></div>
 
 <div className={`lightBlueGlow w-[22rem] h-[102%] border-2 border-[#58c7f9] bg-[#132933] absolute duration-1000 ease-in-out top-0 z-10 p-5 flex flex-col gap-10 items-center ${nav}`}>
  <div className="text-white hover:text-black hover:bg-[#91dcff] font-bold text-xl text-center w-full cursor-pointer" onClick={handleCloseNav}>X</div>

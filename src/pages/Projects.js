@@ -11,6 +11,7 @@ import { ExternalLink } from "react-external-link";
 
 export default function ProjectsTest() {
     const [navMotion, setNavMotion] = useState("-translate-y-48")
+    const [navButton, setNavButton] = useState("-translate-y-48")
     const [projectsPanel, setProjectsPanel] = useState("-bottom-52")
     const [screenOpacity, setScreenOpacity] = useState("opacity-0")
     const [screenWidth, setScreenWidth] = useState("w-[0.5%]")
@@ -44,6 +45,7 @@ export default function ProjectsTest() {
         setTimeout(() => {setScreenWidth("w-[95%]")}, 1000)
         setTimeout(() => {setScreenHeight("h-[95%]")}, 2200)
         setTimeout(() => {setNavMotion("-translate-y-2")}, 3400)
+        setTimeout(() => {setNavButton(" ")}, 3400)
         setTimeout(() => {setProjectsPanel("-bottom-2")}, 3400)
         setTimeout(() => {setLogoFade("opacity-10")}, 4000)
         setTimeout(() => {setNavArrowFade("opacity-100")}, 5000)
@@ -108,7 +110,7 @@ export default function ProjectsTest() {
 
 {/* Faded Background Logo */}
       <img className={`absolute ${logoFade} 
-      sm:w-[30rem] 2xl:w-[70%] 
+      max-sm:w-[70%] sm:w-[30rem] 2xl:w-[70%] 
       -translate-x-[5%] z-0 duration-[1500ms] ease-in-out `} src={ReactMan} alt="React Man Logo" />
 
 
@@ -242,7 +244,7 @@ export default function ProjectsTest() {
         </header>
        </div>
   {/* Max Small (Mobile) Nav */}
-  <div className={`sm:hidden absolute z-10 top-[.45rem] right-2 flex justify-center items-center ${navArrowFade} duration-[1500ms] ease-in-out cursor-pointer`} onClick={handleOpenNav}><img className="h-5" src={NavIcon} alt="Navigation Menu Button"/></div>
+  <div className={`sm:hidden absolute z-10 top-[.45rem] right-2 flex justify-center items-center cursor-pointer`} onClick={handleOpenNav}><img className={`${navButton} duration-1000 ease-in-out h-5`} src={NavIcon} alt="Navigation Menu Button"/></div>
 
 <div className={`lightBlueGlow w-[22rem] h-[102%] border-2 border-[#58c7f9] bg-[#132933] absolute duration-1000 ease-in-out z-10 p-5 flex flex-col gap-10 items-center ${nav}`}>
  <div className="text-white hover:text-black hover:bg-[#91dcff] font-bold text-xl text-center w-full cursor-pointer" onClick={handleCloseNav}>X</div>
