@@ -8,13 +8,17 @@ import Next from "../public/images/next.png"
 import Back from "../public/images/back.png"
 import NavIcon from "../public/images/ProjectsImages/HamBurgMenu.png"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink } from "react-external-link";
 
 export default function About() {
   const [imgInView, setImgInView] = useState(0);
   const [nav, setNav] = useState("-right-[100%]")
+  const [topNav, setTopNav] = useState("-translate-y-20");
+  const [carouselFade, setCarouselFade] = useState("opacity-0");
+  const [aboutFade, setAboutFade] = useState("opacity-0");
+  
 
   const moveStyle = {
     transform: `translateX(-${imgInView}%)`,
@@ -40,6 +44,21 @@ export default function About() {
     setNav("-right-[100%]")
   }
 
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      onLoad();
+    } else {
+      window.addEventListener("load", onLoad)
+    }
+  }, [])
+
+  const onLoad = () => {
+      setTimeout(() => {setTopNav("")}, 200)
+      setTimeout(() => {setCarouselFade("opacity-100")}, 800)
+      setTimeout(() => {setAboutFade("opacity-100")}, 1100)
+  
+  } 
+
   return (
     <>
       <main className="bg-[#132932]
@@ -47,12 +66,13 @@ export default function About() {
       max-sm:h-fit sm:h-fit h-screen 
       font-display relative text-white overflow-hidden">
       
-      <header className="border-b-2 border-[#58c7f9]
+      <header className={`${topNav} ease-in-out duration-500
+      border-b-2 border-[#58c7f9]
         w-full 
         max-sm:h-10 sm:h-14 2xl:h-20 
         flex 
         justify-between 
-        items-center">
+        items-center`}>
           <Link to="/about">
             <h1 className="font-bold 
             max-sm:text-lg sm:text-2xl 
@@ -114,10 +134,10 @@ export default function About() {
         justify-evenly items-center mt-10">
           <div className="max-sm:w-11/12 sm:w-11/12 lg:w-10/12 2xl:w-8/12 min-2xl:w-7/12
           h-full">
-            <section className="lightBlueGlow
+            <section className={`${aboutFade} ease-in-out duration-500 lightBlueGlow
             max-sm:mb-5 sm:mb-5
             max-sm:p-8 p-10 
-            border-2 border-[#58c7f9] text-white">
+            border-2 border-[#58c7f9] text-white`}>
             <h3 className="max-sm:text-3xl text-6xl 
             mb-6 
             font-semibold">About</h3>
@@ -138,9 +158,9 @@ export default function About() {
             </section>
           </div>
           <section className="">
-            <section className="flex flex-col">
+            <section className={`flex flex-col ${carouselFade} ease-in-out duration-500`}>
               <article className="text-center">
-                <h2 className="max-sm:text-2xl text-5xl">Choose Your Ramón</h2>
+                <h2 className={`max-sm:text-2xl text-5xl`}>Choose Your Ramón</h2>
               </article>
               <div className="flex mb-5 mt-5">
                 <button onClick={handleBack}>
