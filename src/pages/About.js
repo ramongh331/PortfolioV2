@@ -6,6 +6,7 @@ import Vacay from "../public/images/Vacation_NoBG.png";
 import Sleeper from "../public/images/Sleeping_NoBG.png";
 import Next from "../public/images/next.png"
 import Back from "../public/images/back.png"
+import NavIcon from "../public/images/ProjectsImages/HamBurgMenu.png"
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -13,6 +14,7 @@ import { ExternalLink } from "react-external-link";
 
 export default function About() {
   const [imgInView, setImgInView] = useState(0);
+  const [nav, setNav] = useState("-right-[100%]")
 
   const moveStyle = {
     transform: `translateX(-${imgInView}%)`,
@@ -31,12 +33,19 @@ export default function About() {
     }
   }
 
+  const handleOpenNav = () => {
+    setNav("-right-2")
+  }
+  const handleCloseNav = () => {
+    setNav("-right-[100%]")
+  }
+
   return (
     <>
       <main className="bg-[#132932]
       w-full 
       max-sm:h-fit sm:h-fit h-screen 
-      font-display relative text-white">
+      font-display relative text-white overflow-hidden">
       
       <header className="border-b-2 border-[#58c7f9]
         w-full 
@@ -53,7 +62,7 @@ export default function About() {
               About
             </h1>
           </Link>
-          <section className="max-sm:w-[25rem] sm:w-[20rem] xl:w-[25rem] 2xl:w-[35rem]
+          <section className="max-sm:hidden sm:w-[20rem] xl:w-[25rem] 2xl:w-[35rem]
           flex 
           justify-between
           items-center 
@@ -72,7 +81,7 @@ export default function About() {
             target="_blank"
             rel="noreferrer"
           >
-              <div className="max-sm:w-7 sm:w-10 
+              <div className="max-sm:hidden sm:w-10 
               max-sm:h-7 sm:h-10 
               max-sm:text-xs sm:text-md
               rounded-3xl flex justify-center items-center font-semibold border-white border-2 bg-blue-300 text-black">
@@ -81,7 +90,26 @@ export default function About() {
             </ExternalLink>
           </section>
         </header>
-        
+        {/* Max Small (Mobile) Nav */}
+  <div className={`sm:hidden absolute z-10 top-[.45rem] right-2 flex justify-center items-center duration-[1500ms] ease-in-out cursor-pointer`} onClick={handleOpenNav}><img className="h-5" src={NavIcon} alt="Navigation Menu Button"/></div>
+
+<div className={`lightBlueGlow w-[22rem] h-[102%] border-2 border-[#58c7f9] bg-[#132933] absolute duration-1000 ease-in-out top-0 z-10 p-5 flex flex-col gap-10 items-center ${nav}`}>
+ <div className="text-white hover:text-black hover:bg-[#91dcff] font-bold text-xl text-center w-full cursor-pointer" onClick={handleCloseNav}>X</div>
+
+ <Link className="cursor-pointer w-[95%] hover:border-2 border-[#58c7f9]" to="/">
+   <h2 className="text-5xl text-white p-4">Home</h2>
+ </Link>
+ <Link className="cursor-pointer w-[100%] hover:border-2 border-[#58c7f9]" to="/technology">
+   <h2 className="text-5xl text-white p-4">Technology</h2>
+ </Link>
+ <Link className="cursor-pointer w-[95%] hover:border-2 border-[#58c7f9]" to="/projects">
+   <h2 className="text-5xl text-white p-4">Projects</h2>
+ </Link>
+ <Link className="cursor-pointer w-[95%] hover:border-2 border-[#58c7f9]" to="/contact">
+   <h2 className="text-5xl text-white p-4">Contact</h2>
+ </Link>
+ 
+</div>
         <div className="flex flex-col-reverse
         justify-evenly items-center mt-10">
           <div className="max-sm:w-11/12 sm:w-11/12 lg:w-10/12 2xl:w-8/12 min-2xl:w-7/12

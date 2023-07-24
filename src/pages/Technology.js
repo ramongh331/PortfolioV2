@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink } from "react-external-link";
 import DesignRow from "../components/DesignTools";
@@ -6,8 +6,10 @@ import FrameworksRow from "../components/Frameworks";
 import LanguagesRow from "../components/Languages";
 import Skydive from "../public/videos/Skydiving.mp4"
 import Title from "../public/images/VidTitle.png"
+import NavIcon from "../public/images/ProjectsImages/HamBurgMenu.png"
 
 export default function Technology() {
+  const [nav, setNav] = useState("-right-[100%]")
 
   const videoEl = useRef(null);
 
@@ -23,9 +25,16 @@ export default function Technology() {
     attemptPlay();
   }, []);
   
+  const handleOpenNav = () => {
+    setNav("-right-2")
+  }
+  const handleCloseNav = () => {
+    setNav("-right-[100%]")
+  }
+
   return (
     <>
-      <main className="bg-[#132932] w-full h-full relative">
+      <main className="bg-[#132932] w-full h-full relative overflow-hidden">
         <header className="bg-gradient-to-b from-[#132932] 
         w-full 
         max-sm:h-10 sm:h-14 2xl:h-20 
@@ -42,7 +51,7 @@ export default function Technology() {
               Skills+
             </h1>
           </Link>
-          <section className="max-sm:w-[25rem] sm:w-[20rem] xl:w-[25rem] 2xl:w-[35rem]
+          <section className="max-sm:hidden sm:w-[20rem] xl:w-[25rem] 2xl:w-[35rem]
           flex 
           justify-between
           items-center 
@@ -61,7 +70,7 @@ export default function Technology() {
             target="_blank"
             rel="noreferrer"
           >
-              <div className="max-sm:w-7 sm:w-10 
+              <div className="max-sm:hidden sm:w-10 
               max-sm:h-7 sm:h-10 
               max-sm:text-xs sm:text-md
               rounded-3xl flex justify-center items-center font-semibold border-white border-2 bg-blue-300 text-black">
@@ -70,6 +79,27 @@ export default function Technology() {
             </ExternalLink>
           </section>
         </header>
+{/* Max Small (Mobile) Nav */}
+<div className={`sm:hidden absolute z-10 top-[.45rem] right-2 flex justify-center items-center duration-[1500ms] ease-in-out cursor-pointer`} onClick={handleOpenNav}><img className="h-5" src={NavIcon} alt="Navigation Menu Button"/></div>
+
+<div className={`lightBlueGlow w-[22rem] h-[102%] border-2 border-[#58c7f9] bg-[#132933] absolute duration-1000 ease-in-out z-10 p-5 flex flex-col gap-10 items-center ${nav}`}>
+ <div className="text-white hover:text-black hover:bg-[#91dcff] font-bold text-xl text-center w-full cursor-pointer" onClick={handleCloseNav}>X</div>
+
+ <Link className="cursor-pointer w-[95%] hover:border-2 border-[#58c7f9]" to="/">
+   <h2 className="text-5xl text-white p-4">Home</h2>
+ </Link>
+ <Link className="cursor-pointer w-[95%] hover:border-2 border-[#58c7f9]" to="/about">
+   <h2 className="text-5xl text-white p-4">About</h2>
+ </Link>
+ <Link className="cursor-pointer w-[100%] hover:border-2 border-[#58c7f9]" to="/projects">
+   <h2 className="text-5xl text-white p-4">Projects</h2>
+ </Link>
+ <Link className="cursor-pointer w-[95%] hover:border-2 border-[#58c7f9]" to="/contact">
+   <h2 className="text-5xl text-white p-4">Contact</h2>
+ </Link>
+ 
+</div>
+
         <section className="w-full 
         max-sm:h-full sm:h-full lg:h-[30rem] 2xl:h-[45rem] 
         overflow-hidden 
