@@ -79,7 +79,7 @@ const [socialsFade, setSocialsFade] = useState("opacity-0")
             target="_blank"
             rel="noreferrer"
           >
-            <p className="sm:text-xl lg:text-base xl:text-xl">Resumè</p>
+            <p className="sm:text-xl lg:text-base xl:text-xl"><span className="hover:text-blue-500 underline">Resumè</span></p>
           </ExternalLink>
         </section>
 
@@ -90,26 +90,26 @@ const [socialsFade, setSocialsFade] = useState("opacity-0")
           <form className="flex flex-col gap-2" ref={form} onSubmit={sendEmail}>
             
               <input
-                className="w-full h-[3rem] border-[1px] border-black p-2"
+                className="w-full h-[3rem] border-[1px] border-black p-2 text-black"
                 type="text"
                 name="user_name"
                 placeholder="Name"
               />
             
               <input
-                className="w-full h-[3rem] border-[1px] border-black p-2"
+                className="w-full h-[3rem] border-[1px] border-black p-2 text-black"
                 type="email"
                 name="user_email"
                 placeholder="Email"
               />
             
               <textarea
-                className="w-full h-[6rem] border-[1px] border-black p-2"
+                className="w-full h-[6rem] border-[1px] border-black p-2 text-black"
                 name="message"
                 placeholder="Message"
               />
             <section id="submit">
-              <input className="border-[1px] border-black py-1 px-4" type="submit" value="Send" />
+              <input className="border-[1px] border-black hover:border-[#58c7f9] py-1 px-4 cursor-pointer" type="submit" value="Send" />
             </section>
           </form>
         </section>
