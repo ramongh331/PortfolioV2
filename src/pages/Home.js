@@ -35,6 +35,20 @@ export default function Home() {
 
   return (
     <>
+ <head>
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=G-M0W3M884JT`}></script>
+  <script dangerouslySetInnerHTML={{
+    _html: 
+    `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M0W3M884JT', {page_path: window.location.pathname,
+  });`,
+}}>
+  
+</script>
+ </head>
       <main className="bg-[#132932] w-full h-screen flex flex-col justify-evenly items-center font-display font-bold text-white">
         <h1
           className={`max-sm:text-4xl sm:text-8xl 2xl:text-[190px] min-[1920px]:text-[220px] 
